@@ -64,6 +64,18 @@ A complete end-to-end machine learning project predicting developer salaries usi
 - **Preprocessing**: Custom transformers, ColumnTransformer, StandardScaler
 - **Evaluation**: GridSearchCV, cross-validation, ensemble methods
 
+## Getting Started
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <https://github.com/harry7747/SpaceX-Falcon-9-Landing-Prediction-Model>
+    ```
+2.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+    *(Note: You may need to create a `requirements.txt` file listing libraries like pandas, scikit-learn, numpy, matplotlib, etc.)*
+
 ## 📁 Project Structure
 
 ```

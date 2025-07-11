@@ -68,7 +68,7 @@ A complete end-to-end machine learning project predicting developer salaries usi
 
 1.  **Clone the repository:**
     ```bash
-    git clone <https://github.com/harry7747/SpaceX-Falcon-9-Landing-Prediction-Model>
+    git clone <github.com/hasn77/Stack-Overflow-Survey-Dataset-Model>
     ```
 2.  **Install dependencies:**
     ```bash

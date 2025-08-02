@@ -12,7 +12,7 @@ A complete end-to-end machine learning project predicting developer salaries usi
 
 - **88% Performance Improvement**: From $432K RMSE (initial disaster) to $52K RMSE (final ensemble)
 - **Advanced Pipeline**: Custom transformers, target encoding, and leak-proof preprocessing
-- **Ensemble Victory**: VotingRegressor combining Random Forest, Gradient Boosting, and XGBoost
+- **Ensemble Victory**: VotingRegressor combining Random Forest, and Gradient Boosting
 
 ## 🔧 Technical Architecture
 

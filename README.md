@@ -1,4 +1,4 @@
-# Stack Overflow Developer Salary Prediction 💰
+# Stack Overflow Developer Salary Prediction
 
 A complete end-to-end machine learning project predicting developer salaries using the Stack Overflow 2023 Survey dataset. Built as part of mastering Chapter 2 concepts from "Hands-On Machine Learning" by Aurélien Géron.
 

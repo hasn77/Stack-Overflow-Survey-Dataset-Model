@@ -108,3 +108,39 @@ class CustomTargetEncoder(BaseEstimator, TransformerMixin):
         if input_features is None:
             return self.feature_names_in_
         return input_features
+    
+def bucketize_professional_tech(tech_string):
+    """
+    Applies hierarchical keyword-based bucketing to a semi-colon separated string of technologies.
+    It iterates through each technology and assigns the first bucket that matches.
+    """
+    if pd.isna(tech_string):
+        return 'None'
+    
+    lower_tech_string = str(tech_string).lower()
+
+    if 'none of these' in lower_tech_string:
+        return 'None'
+
+    buckets = {
+        'AI/ML': ['ai', 'machine learning', 'ml', 'deep learning', 'neural network', 'nlp', 'natural language', 'computer vision', 'tensorflow', 'pytorch', 'keras', 'scikit-learn', 'openai'],
+        'Data Science & Analytics': ['data science', 'data analysis', 'analytics', 'big data', 'hadoop', 'spark', 'pandas', 'numpy', 'tableau', 'power bi', 'databricks', 'snowflake'],
+        'DevOps & Cloud': ['devops', 'ci/cd', 'continuous integration', 'continuous delivery', 'docker', 'kubernetes', 'terraform', 'ansible', 'jenkins', 'aws', 'azure', 'gcp', 'cloud', 'observability'],
+        'Web Development': ['web', 'frontend', 'backend', 'full-stack', 'javascript', 'react', 'angular', 'vue', 'node.js', 'django', 'flask', 'ruby on rails', 'php', 'asp.net'],
+        'Mobile Development': ['mobile', 'ios', 'android', 'swift', 'kotlin', 'react native', 'flutter', 'xamarin'],
+        'Databases': ['database', 'sql', 'nosql', 'postgresql', 'mysql', 'sql server', 'mongodb', 'redis', 'cassandra', 'firebase'],
+        'Testing & QA': ['testing', 'qa', 'quality assurance', 'selenium', 'jest', 'pytest', 'cypress', 'junit'],
+        'Security': ['security', 'cybersecurity', 'infosec', 'penetration testing', 'pen testing'],
+        'Developer Tools': ['git', 'github', 'gitlab', 'jira', 'visual studio code', 'ide'],
+        'Architecture & Practices': ['microservices', 'developer portal', 'innersource']
+    }
+
+    listed_techs = [tech.strip().lower() for tech in str(tech_string).split(';')]
+
+    for tech in listed_techs:
+        for bucket, keywords in buckets.items():
+            if any(keyword in tech for keyword in keywords):
+                return bucket
+
+    return 'Other'
+

@@ -74,24 +74,6 @@ A complete end-to-end machine learning project predicting developer salaries usi
     ```bash
     pip install -r requirements.txt
     ```
-    *(Note: You may need to create a `requirements.txt` file listing libraries like pandas, scikit-learn, numpy, matplotlib, etc.)*
-
-## 📁 Project Structure
-
-```
-├── data/
-│   └── stack_overflow_2023_survey.csv
-├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_feature_engineering.ipynb
-│   ├── 03_model_development.ipynb
-│   └── journal.ipynb
-├── src/
-│   ├── preprocessing.py
-│   ├── feature_engineering.py
-│   └── models.py
-└── README.md
-```
 
 ## 🎓 Key Learnings
 

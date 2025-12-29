@@ -64,17 +64,6 @@ A complete end-to-end machine learning project predicting developer salaries usi
 - **Preprocessing**: Custom transformers, ColumnTransformer, StandardScaler
 - **Evaluation**: GridSearchCV, cross-validation, ensemble methods
 
-## Getting Started
-
-1.  **Clone the repository:**
-    ```bash
-    git clone <github.com/hasn77/Stack-Overflow-Survey-Dataset-Model>
-    ```
-2.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
 ## 🎓 Key Learnings
 
 - **Pipeline Design**: Proper data flow prevents encoding errors and ensures reproducibility
